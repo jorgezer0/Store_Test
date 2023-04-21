@@ -383,7 +383,7 @@ SpriteRenderer:
   m_SortingLayerID: 1306157021
   m_SortingLayer: 1
   m_SortingOrder: -4
-  m_Sprite: {fileID: 818063260, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+  m_Sprite: {fileID: -809578613, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -408,6 +408,7 @@ GameObject:
   - component: {fileID: 9007621971101695761}
   - component: {fileID: 9007621971101695762}
   - component: {fileID: 9007621971101695763}
+  - component: {fileID: 814793236729565413}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -527,22 +528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 9007621971101695762}
-  movementFilter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
   moveSpeed: 0.75
-  collisionOffset: 0
 --- !u!50 &9007621971101695762
 Rigidbody2D:
   serializedVersion: 4
@@ -590,6 +576,40 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.10076201, y: 0.033720925}
   m_EdgeRadius: 0
+--- !u!114 &814793236729565413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9007621971101695758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097b95c9f69f04f2d8c08a817e7786af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueView: {fileID: 0}
+  continueActionType: 1
+  continueActionKeyCode: 32
+  continueActionReference: {fileID: 0}
+  continueAction:
+    m_Name: Skip
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 
+      m_Path: Submit
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Skip
+      m_Flags: 0
+    m_Flags: 0
+  enableActionOnStart: 1
 --- !u!1 &9007621971213294902
 GameObject:
   m_ObjectHideFlags: 0
