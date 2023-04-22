@@ -11,10 +11,7 @@ public class NpcBehavior : MonoBehaviour
     [SerializeField] private string startNode;
 
     public UnityEvent onDialogueComplete;
-
-    private bool isPlayerNear;
     
-    // Start is called before the first frame update
     private void Start()
     {
         _dialogueRunner = FindObjectOfType<DialogueRunner>();
