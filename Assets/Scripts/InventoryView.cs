@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -7,6 +8,8 @@ using UnityEngine.UI;
 public class InventoryView : MonoBehaviour
 {
     [SerializeField] private CanvasGroup canvasGroup;
+
+    [SerializeField] private TextMeshProUGUI moneyField;
     
     [SerializeField] private Button headButton;
     [SerializeField] private Button upperButton;
@@ -17,8 +20,10 @@ public class InventoryView : MonoBehaviour
 
     private InventoryViewData _inventoryViewData;
     
-    public class InventoryViewData  
+    public class InventoryViewData
     {
+        public int money;
+        
         public List<Sprite> headItems;
         public List<Sprite> upperItems;
         public List<Sprite> lowerItems;
@@ -57,6 +62,7 @@ public class InventoryView : MonoBehaviour
     {
         canvasGroup.alpha = 1;
         _inventoryViewData = viewData;
+        moneyField.text = _inventoryViewData.money.ToString();
         ShowHeadItems();
     }
     

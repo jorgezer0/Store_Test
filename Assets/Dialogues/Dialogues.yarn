@@ -16,7 +16,7 @@ position: -153,-84
 Leo: Wellcome fellow traveler!
 Leo: How can I help you!?
 -> Buy Clothes
-    <<open_store>>
+    <<open_store StoreUi>>
 -> Nothing, thanks.
 ===
 title: Sign

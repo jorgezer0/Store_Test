@@ -8,17 +8,19 @@ public class PlayerInvetory : MonoBehaviour
 {
     private InventoryView _inventoryView;
     
-    [SerializeField] private List<Sprite> headItems;
-    [SerializeField] private List<Sprite> upperItems;
-    [SerializeField] private List<Sprite> lowerItems;
-    [SerializeField] private List<Sprite> feetItems;
+    public List<Sprite> headItems;
+    public List<Sprite> upperItems;
+    public List<Sprite> lowerItems;
+    public List<Sprite> feetItems;
 
     [SerializeField] private SpriteRenderer headSlot;
     [SerializeField] private SpriteRenderer upperSlot;
     [SerializeField] private SpriteRenderer lowerSlot;
     [SerializeField] private SpriteRenderer feetSlot;
 
-    private void Start()
+    public int money = 1000;
+
+    private void Awake()
     {
         _inventoryView = FindObjectOfType<InventoryView>();
         
@@ -46,7 +48,8 @@ public class PlayerInvetory : MonoBehaviour
                 EquipHead = EquipHead,
                 EquipUpper = EquipUpper,
                 EquipLower = EquipLower,
-                EquipFeet = EquipFeet
+                EquipFeet = EquipFeet,
+                money = money
             };
 
             _inventoryView.OpenInventory(inventoryData);
@@ -79,5 +82,42 @@ public class PlayerInvetory : MonoBehaviour
     {
         feetSlot.sprite = feetItems[index];
         _inventoryView.UpdateEquippedFeet(feetSlot.sprite.name);
+    }
+
+    public string GetHeadEquipped()
+    {
+        return headSlot.sprite.name;
+    }
+    public string GetUpperEquipped()
+    {
+        return upperSlot.sprite.name;
+    }
+    public string GetLowerEquipped()
+    {
+        return lowerSlot.sprite.name;
+    }
+    public string GetFeetEquipped()
+    {
+        return feetSlot.sprite.name;
+    }
+
+    public void AddHeadItem(Sprite item)
+    {
+        headItems.Add(item);
+    }
+    
+    public void AddUpperItem(Sprite item)
+    {
+        upperItems.Add(item);
+    }
+    
+    public void AddLowerItem(Sprite item)
+    {
+        lowerItems.Add(item);
+    }
+    
+    public void AddFeetItem(Sprite item)
+    {
+        feetItems.Add(item);
     }
 }
