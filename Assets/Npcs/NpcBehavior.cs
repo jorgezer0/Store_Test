@@ -7,20 +7,20 @@ using Yarn.Unity;
 
 public class NpcBehavior : MonoBehaviour
 {
-    private DialogueRunner _dialogueRunner;
+    private DialogueRunner dialogueRunner;
     [SerializeField] private string startNode;
 
     public UnityEvent onDialogueComplete;
     
     private void Start()
     {
-        _dialogueRunner = FindObjectOfType<DialogueRunner>();
+        dialogueRunner = FindObjectOfType<DialogueRunner>();
     }
     
     public void StartDialogue()
     {
-        _dialogueRunner.StartDialogue(startNode);
-        _dialogueRunner.onDialogueComplete.AddListener(OnDialogueComplete);
+        dialogueRunner.StartDialogue(startNode);
+        dialogueRunner.onDialogueComplete.AddListener(OnDialogueComplete);
     }
 
     private void OnDialogueComplete()

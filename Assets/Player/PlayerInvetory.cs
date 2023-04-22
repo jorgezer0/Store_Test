@@ -37,19 +37,19 @@ public class PlayerInvetory : MonoBehaviour
         {
             var inventoryData = new InventoryView.InventoryViewData()
             {
-                headItems = headItems,
-                upperItems = upperItems,
-                lowerItems = lowerItems,
-                feetItems = feetItems,
-                headEquippedId = headSlot.sprite.name,
-                upperEquippedId = upperSlot.sprite.name,
-                lowerEquippedId = lowerSlot.sprite.name,
-                feetEquippedId = feetSlot.sprite.name,
+                HeadItems = headItems,
+                UpperItems = upperItems,
+                LowerItems = lowerItems,
+                FeetItems = feetItems,
+                HeadEquippedId = headSlot.sprite.name,
+                UpperEquippedId = upperSlot.sprite.name,
+                LowerEquippedId = lowerSlot.sprite.name,
+                FeetEquippedId = feetSlot.sprite.name,
                 EquipHead = EquipHead,
                 EquipUpper = EquipUpper,
                 EquipLower = EquipLower,
                 EquipFeet = EquipFeet,
-                money = money
+                Money = money
             };
 
             _inventoryView.OpenInventory(inventoryData);
@@ -60,25 +60,25 @@ public class PlayerInvetory : MonoBehaviour
         }
     }
 
-    public void EquipHead(int index)
+    private void EquipHead(int index)
     {
         headSlot.sprite = headItems[index];
         _inventoryView.UpdateEquippedHead(headSlot.sprite.name);
     }
-    
-    public void EquipUpper(int index)
+
+    private void EquipUpper(int index)
     {
         upperSlot.sprite = upperItems[index];
         _inventoryView.UpdateEquippedUpper(upperSlot.sprite.name);
     }
-    
-    public void EquipLower(int index)
+
+    private void EquipLower(int index)
     {
         lowerSlot.sprite = lowerItems[index];
         _inventoryView.UpdateEquippedLower(lowerSlot.sprite.name);
     }
-    
-    public void EquipFeet(int index)
+
+    private void EquipFeet(int index)
     {
         feetSlot.sprite = feetItems[index];
         _inventoryView.UpdateEquippedFeet(feetSlot.sprite.name);

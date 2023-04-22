@@ -45,7 +45,6 @@ public class StoreManager : MonoBehaviour
         Feet
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         _playerInventory = FindObjectOfType<PlayerInvetory>();
@@ -59,8 +58,8 @@ public class StoreManager : MonoBehaviour
         
         closeButton.onClick.AddListener(CloseStore);
 
-        var maxAmout = GetMaxItemsAmount();
-        for (int i = 0; i < maxAmout; i++)
+        var maxAmount = GetMaxItemsAmount();
+        for (int i = 0; i < maxAmount; i++)
         {
             var itemStoreGO = Instantiate(storeItemView, storeItemViewRoot);
             _storeItemViews.Add(itemStoreGO.GetComponent<StoreItemView>());
@@ -84,6 +83,7 @@ public class StoreManager : MonoBehaviour
         return itemsMax;
     }
 
+    //Command called from the Dialog System
     [YarnCommand("open_store")]
     public void OpenStore()
     {
@@ -114,7 +114,7 @@ public class StoreManager : MonoBehaviour
         playerMoneyField.text = _playerInventory.money.ToString();
     }
     
-    public void ShowHeadItems()
+    private void ShowHeadItems()
     {
         ClearAllImages();
         
@@ -145,7 +145,7 @@ public class StoreManager : MonoBehaviour
         ToggleBuyButton(!wasBought);
     }
     
-    public void ShowUpperItems()
+    private void ShowUpperItems()
     {
         ClearAllImages();
         
@@ -176,7 +176,7 @@ public class StoreManager : MonoBehaviour
         ToggleBuyButton(!wasBought);
     }
     
-    public void ShowLowerItems()
+    private void ShowLowerItems()
     {
         ClearAllImages();
         
@@ -207,7 +207,7 @@ public class StoreManager : MonoBehaviour
         ToggleBuyButton(!wasBought);
     }
     
-    public void ShowFeetItems()
+    private void ShowFeetItems()
     {
         ClearAllImages();
         

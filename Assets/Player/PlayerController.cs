@@ -10,39 +10,32 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 1;
     
-    private Vector2 _movementInput;
+    private Vector2 movementInput;
     private bool nearNpc;
     private bool talking;
     private NpcBehavior npc;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     private void FixedUpdate()
     {
         if (!talking)
-            _rigidbody.MovePosition(_rigidbody.position + (_movementInput * Time.fixedDeltaTime * moveSpeed));
+            _rigidbody.MovePosition(_rigidbody.position + (movementInput * Time.fixedDeltaTime * moveSpeed));
     }
 
+    //Method called from the Input System
     private void OnMove(InputValue inputValue)
     {
-        _movementInput = inputValue.Get<Vector2>();
+        movementInput = inputValue.Get<Vector2>();
     }
 
+    //Method called from the Input System
     private void OnInteract(InputValue inputValue)
     {
-        if (npc)
-        {
-            if (!talking)
-            {
-                talking = true;
-                npc.StartDialogue();
-                npc.onDialogueComplete.AddListener(OnDialogueComplete);
-            }
-        }
+        if (!npc) return;
+        if (talking) return;
+        
+        talking = true;
+        npc.StartDialogue();
+        npc.onDialogueComplete.AddListener(OnDialogueComplete);
     }
 
     private void OnDialogueComplete()

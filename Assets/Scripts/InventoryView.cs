@@ -18,21 +18,21 @@ public class InventoryView : MonoBehaviour
 
     [SerializeField] private Transform contentPanel;
 
-    private InventoryViewData _inventoryViewData;
+    private InventoryViewData inventoryViewData;
     
     public class InventoryViewData
     {
-        public int money;
+        public int Money;
         
-        public List<Sprite> headItems;
-        public List<Sprite> upperItems;
-        public List<Sprite> lowerItems;
-        public List<Sprite> feetItems;
+        public List<Sprite> HeadItems;
+        public List<Sprite> UpperItems;
+        public List<Sprite> LowerItems;
+        public List<Sprite> FeetItems;
 
-        public string headEquippedId;
-        public string upperEquippedId;
-        public string lowerEquippedId;
-        public string feetEquippedId;
+        public string HeadEquippedId;
+        public string UpperEquippedId;
+        public string LowerEquippedId;
+        public string FeetEquippedId;
 
         public UnityAction<int> EquipHead;
         public UnityAction<int> EquipUpper;
@@ -61,8 +61,8 @@ public class InventoryView : MonoBehaviour
     public void OpenInventory(InventoryViewData viewData)
     {
         canvasGroup.alpha = 1;
-        _inventoryViewData = viewData;
-        moneyField.text = _inventoryViewData.money.ToString();
+        inventoryViewData = viewData;
+        moneyField.text = inventoryViewData.Money.ToString();
         ShowHeadItems();
     }
     
@@ -80,83 +80,83 @@ public class InventoryView : MonoBehaviour
         }
     }
 
-    public void ShowHeadItems()
+    private void ShowHeadItems()
     {
         ClearAllImages();
         
-        for (var i = 0; i < _inventoryViewData.headItems.Count; i++)
+        for (var i = 0; i < inventoryViewData.HeadItems.Count; i++)
         {
-            itemViews[i].SetItemImage(_inventoryViewData.headItems[i], _inventoryViewData.EquipHead, i);
-            itemViews[i].ToggleEquipped(_inventoryViewData.headItems[i].name == _inventoryViewData.headEquippedId);
+            itemViews[i].SetItemImage(inventoryViewData.HeadItems[i], inventoryViewData.EquipHead, i);
+            itemViews[i].ToggleEquipped(inventoryViewData.HeadItems[i].name == inventoryViewData.HeadEquippedId);
         }
     }
 
     public void UpdateEquippedHead(string id)
     {
-        _inventoryViewData.headEquippedId = id;
-        for (var i = 0; i < _inventoryViewData.headItems.Count; i++)
+        inventoryViewData.HeadEquippedId = id;
+        for (var i = 0; i < inventoryViewData.HeadItems.Count; i++)
         {
-            itemViews[i].ToggleEquipped(_inventoryViewData.headItems[i].name == _inventoryViewData.headEquippedId);
+            itemViews[i].ToggleEquipped(inventoryViewData.HeadItems[i].name == inventoryViewData.HeadEquippedId);
         }
     }
 
-    public void ShowUpperItems()
+    private void ShowUpperItems()
     {
         ClearAllImages();
         
-        for (var i = 0; i < _inventoryViewData.upperItems.Count; i++)
+        for (var i = 0; i < inventoryViewData.UpperItems.Count; i++)
         {
-            itemViews[i].SetItemImage(_inventoryViewData.upperItems[i], _inventoryViewData.EquipUpper, i);
-            itemViews[i].ToggleEquipped(_inventoryViewData.upperItems[i].name == _inventoryViewData.upperEquippedId);
+            itemViews[i].SetItemImage(inventoryViewData.UpperItems[i], inventoryViewData.EquipUpper, i);
+            itemViews[i].ToggleEquipped(inventoryViewData.UpperItems[i].name == inventoryViewData.UpperEquippedId);
         }
     }
     
     public void UpdateEquippedUpper(string id)
     {
-        _inventoryViewData.upperEquippedId = id;
-        for (var i = 0; i < _inventoryViewData.upperItems.Count; i++)
+        inventoryViewData.UpperEquippedId = id;
+        for (var i = 0; i < inventoryViewData.UpperItems.Count; i++)
         {
-            itemViews[i].ToggleEquipped(_inventoryViewData.upperItems[i].name == _inventoryViewData.upperEquippedId);
+            itemViews[i].ToggleEquipped(inventoryViewData.UpperItems[i].name == inventoryViewData.UpperEquippedId);
         }
     }
-    
-    public void ShowLowerItems()
+
+    private void ShowLowerItems()
     {
         ClearAllImages();
         
-        for (var i = 0; i < _inventoryViewData.lowerItems.Count; i++)
+        for (var i = 0; i < inventoryViewData.LowerItems.Count; i++)
         {
-            itemViews[i].SetItemImage(_inventoryViewData.lowerItems[i], _inventoryViewData.EquipLower, i);
-            itemViews[i].ToggleEquipped(_inventoryViewData.lowerItems[i].name == _inventoryViewData.lowerEquippedId);
+            itemViews[i].SetItemImage(inventoryViewData.LowerItems[i], inventoryViewData.EquipLower, i);
+            itemViews[i].ToggleEquipped(inventoryViewData.LowerItems[i].name == inventoryViewData.LowerEquippedId);
         }
     }
     
     public void UpdateEquippedLower(string id)
     {
-        _inventoryViewData.lowerEquippedId = id;
-        for (var i = 0; i < _inventoryViewData.lowerItems.Count; i++)
+        inventoryViewData.LowerEquippedId = id;
+        for (var i = 0; i < inventoryViewData.LowerItems.Count; i++)
         {
-            itemViews[i].ToggleEquipped(_inventoryViewData.lowerItems[i].name == _inventoryViewData.lowerEquippedId);
+            itemViews[i].ToggleEquipped(inventoryViewData.LowerItems[i].name == inventoryViewData.LowerEquippedId);
         }
     }
-    
-    public void ShowFeetItems()
+
+    private void ShowFeetItems()
     {
         ClearAllImages();
         
-        for (var i = 0; i < _inventoryViewData.feetItems.Count; i++)
+        for (var i = 0; i < inventoryViewData.FeetItems.Count; i++)
         {
-            itemViews[i].SetItemImage(_inventoryViewData.feetItems[i], _inventoryViewData.EquipFeet, i);
-            itemViews[i].ToggleEquipped(_inventoryViewData.feetItems[i].name == _inventoryViewData.feetEquippedId);
+            itemViews[i].SetItemImage(inventoryViewData.FeetItems[i], inventoryViewData.EquipFeet, i);
+            itemViews[i].ToggleEquipped(inventoryViewData.FeetItems[i].name == inventoryViewData.FeetEquippedId);
         }
     }
 
     public void UpdateEquippedFeet(string id)
     {
-        _inventoryViewData.feetEquippedId = id;
-        for (var i = 0; i < _inventoryViewData.feetItems.Count; i++)
+        inventoryViewData.FeetEquippedId = id;
+        for (var i = 0; i < inventoryViewData.FeetItems.Count; i++)
         {
-            itemViews[i].ToggleEquipped(_inventoryViewData.feetItems[i].name == _inventoryViewData.feetEquippedId);
+            itemViews[i].ToggleEquipped(inventoryViewData.FeetItems[i].name == inventoryViewData.FeetEquippedId);
         }
     }
 }
