@@ -8,17 +8,19 @@ public class PlayerInvetory : MonoBehaviour
 {
     private InventoryView _inventoryView;
     
-    [SerializeField] private List<Sprite> headItems;
-    [SerializeField] private List<Sprite> upperItems;
-    [SerializeField] private List<Sprite> lowerItems;
-    [SerializeField] private List<Sprite> feetItems;
+    public List<Sprite> headItems;
+    public List<Sprite> upperItems;
+    public List<Sprite> lowerItems;
+    public List<Sprite> feetItems;
 
     [SerializeField] private SpriteRenderer headSlot;
     [SerializeField] private SpriteRenderer upperSlot;
     [SerializeField] private SpriteRenderer lowerSlot;
     [SerializeField] private SpriteRenderer feetSlot;
 
-    private void Start()
+    public int money = 1000;
+
+    private void Awake()
     {
         _inventoryView = FindObjectOfType<InventoryView>();
         
@@ -35,18 +37,19 @@ public class PlayerInvetory : MonoBehaviour
         {
             var inventoryData = new InventoryView.InventoryViewData()
             {
-                headItems = headItems,
-                upperItems = upperItems,
-                lowerItems = lowerItems,
-                feetItems = feetItems,
-                headEquippedId = headSlot.sprite.name,
-                upperEquippedId = upperSlot.sprite.name,
-                lowerEquippedId = lowerSlot.sprite.name,
-                feetEquippedId = feetSlot.sprite.name,
+                HeadItems = headItems,
+                UpperItems = upperItems,
+                LowerItems = lowerItems,
+                FeetItems = feetItems,
+                HeadEquippedId = headSlot.sprite.name,
+                UpperEquippedId = upperSlot.sprite.name,
+                LowerEquippedId = lowerSlot.sprite.name,
+                FeetEquippedId = feetSlot.sprite.name,
                 EquipHead = EquipHead,
                 EquipUpper = EquipUpper,
                 EquipLower = EquipLower,
-                EquipFeet = EquipFeet
+                EquipFeet = EquipFeet,
+                Money = money
             };
 
             _inventoryView.OpenInventory(inventoryData);
@@ -57,27 +60,64 @@ public class PlayerInvetory : MonoBehaviour
         }
     }
 
-    public void EquipHead(int index)
+    private void EquipHead(int index)
     {
         headSlot.sprite = headItems[index];
         _inventoryView.UpdateEquippedHead(headSlot.sprite.name);
     }
-    
-    public void EquipUpper(int index)
+
+    private void EquipUpper(int index)
     {
         upperSlot.sprite = upperItems[index];
         _inventoryView.UpdateEquippedUpper(upperSlot.sprite.name);
     }
-    
-    public void EquipLower(int index)
+
+    private void EquipLower(int index)
     {
         lowerSlot.sprite = lowerItems[index];
         _inventoryView.UpdateEquippedLower(lowerSlot.sprite.name);
     }
-    
-    public void EquipFeet(int index)
+
+    private void EquipFeet(int index)
     {
         feetSlot.sprite = feetItems[index];
         _inventoryView.UpdateEquippedFeet(feetSlot.sprite.name);
+    }
+
+    public string GetHeadEquipped()
+    {
+        return headSlot.sprite.name;
+    }
+    public string GetUpperEquipped()
+    {
+        return upperSlot.sprite.name;
+    }
+    public string GetLowerEquipped()
+    {
+        return lowerSlot.sprite.name;
+    }
+    public string GetFeetEquipped()
+    {
+        return feetSlot.sprite.name;
+    }
+
+    public void AddHeadItem(Sprite item)
+    {
+        headItems.Add(item);
+    }
+    
+    public void AddUpperItem(Sprite item)
+    {
+        upperItems.Add(item);
+    }
+    
+    public void AddLowerItem(Sprite item)
+    {
+        lowerItems.Add(item);
+    }
+    
+    public void AddFeetItem(Sprite item)
+    {
+        feetItems.Add(item);
     }
 }

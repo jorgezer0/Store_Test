@@ -1,0 +1,202 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f773195bd0abc45bf308715a8b6487, type: 3}
+  m_Name: StoreStockContainer
+  m_EditorClassIdentifier: 
+  availableHeadItems:
+  - itemImage: {fileID: 23062574, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 1990891467, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: -1703146641, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 384382757, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 1538721135, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 1621628497, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 986902325, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: -833562053, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 687988745, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: -1433186006, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: 1655745355, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: 1389440121, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: -1505062651, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: 1552815747, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: 243454804, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: -1748749738, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: 1076395834, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: -942096094, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: 160991418, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: 1331596692, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: -2001973994, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: 1813317530, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: -1421646469, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: -1796083888, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: 741289943, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 30
+  - itemImage: {fileID: -321194187, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 30
+  - itemImage: {fileID: 22817149, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 30
+  - itemImage: {fileID: -1342034555, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 30
+  - itemImage: {fileID: -1879690937, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 30
+  - itemImage: {fileID: 1246273515, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 30
+  - itemImage: {fileID: 1356024461, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 30
+  - itemImage: {fileID: 1893498390, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 30
+  - itemImage: {fileID: -937922397, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 30
+  - itemImage: {fileID: -1646443665, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 30
+  - itemImage: {fileID: -1335383571, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 30
+  - itemImage: {fileID: -393808269, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 30
+  availableUpperItems:
+  - itemImage: {fileID: -1417800032, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: -1405484815, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: -768329346, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 818063260, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: -809578613, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: -1198330346, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 830005492, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: -658995377, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 1575682564, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: -1048955545, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: -1608318095, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: -1456632380, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: -1669515364, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: -342122488, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: -239530922, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: -1880536755, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: -237248682, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: 93225383, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: -2062178771, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: -1992017843, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: 595855284, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: 656337387, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: -1893935547, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: 1757417189, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 15
+  - itemImage: {fileID: -1273852320, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: 169409191, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: 349609910, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: 742597626, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: -1953830824, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: 69236042, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: -1705444673, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: -206981090, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: 1199266011, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: 1218170827, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: 1067512693, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: -422483606, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  availableLowerItems:
+  - itemImage: {fileID: 956097537, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 2137849595, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 1227743419, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: -100962688, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 229115333, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: -635382722, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: -657911987, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 1517330555, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  availableFeetItems:
+  - itemImage: {fileID: 1224776471, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 1896913999, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: -1186217617, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 406102377, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 1328390110, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: -57588095, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 1202227301, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 1902086964, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 10
+  - itemImage: {fileID: 1385603826, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: 743327908, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: -875009410, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
+  - itemImage: {fileID: 1468439078, guid: 9a2bb1d102e58344fad607fe258f9f50, type: 3}
+    price: 20
