@@ -1,25 +1,26 @@
-﻿title: Moe
+title: Moe
 position: -151,-258
 ---
 Moe: Hello! Welcome to our lovelly island!
 Moe: Hope you like buying clothes, because the only thing we have here is a chothes shop!
 ===
 title: Marta
-position: 72,-246
+position: 91,-228
 ---
 Marta: I love this store.
 Marta: People come from all over the world to buy here.
 ===
 title: Leo
-position: -163,-89
+position: -153,-84
 ---
 Leo: Wellcome fellow traveler!
 Leo: How can I help you!?
 -> Buy Clothes
+    <<open_store>>
 -> Nothing, thanks.
 ===
 title: Sign
-position: 73,-59
+position: 90,-36
 ---
 Sign: THE BEST CLOTHES SHOP IN THE ISLAND!
 ===
